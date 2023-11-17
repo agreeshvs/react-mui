@@ -3,6 +3,7 @@ import { AppBar, Button, IconButton, Menu, MenuItem, Stack, Toolbar, Typography 
 import  CatchingPokemonIcon  from '@mui/icons-material/CatchingPokemon'
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
+import { MuiDrawer } from './MuiDrawer';
 export const MuiNavbar = () => {
   const [anchorEl, setAchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl);
@@ -15,12 +16,14 @@ export const MuiNavbar = () => {
   return (
     <AppBar position='static'>
         <Toolbar>
+            <MuiDrawer />
             <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
                 <CatchingPokemonIcon />
             </IconButton>
-            <Typography variant='h6' component='div' sx={ {flexGrow:1}}>
+            <Typography variant='h6' width={'150px'} component='div' sx={ {flexGrow:1}}>
                 POKEMONAPP
             </Typography>
+            
             <Stack direction={'row'} spacing={2}>
                 <Button color='inherit'>Features</Button>
                 <Button color='inherit'>Pricing</Button>
