@@ -1,7 +1,9 @@
 .App {
-  padding: 1rem;
+  /* padding: 1rem; */
 }
-
+body{
+  /* background-colo#eeeeeeeee; */
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
